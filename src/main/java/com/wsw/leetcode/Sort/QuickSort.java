@@ -7,35 +7,36 @@ package com.wsw.leetcode.Sort;
  *
  */
 public class QuickSort {
+
+    public static void Quick_Sort(int[] nums) {
+        if (nums.length > 0)
+            Quick(nums, 0, nums.length - 1);
+    }
+
+    //递归排序
+    private static void Quick(int[] nums, int low, int high) {
+        if (low < high){
+            int mid = getMiddle(nums, low, high);
+            Quick(nums, low, mid - 1);
+            Quick(nums, mid + 1, high);
+        }
+    }
+
     //找中间值
     public static int getMiddle(int[] nums, int low, int high) {
         int temp = nums[low];
-        while (low < high) {
-            while (low < high && nums[high] >= temp) {
+        while (low < high){
+            while (low < high && nums[high] >= temp){
                 high--;
             }
             nums[low] = nums[high];
-            while (low < high && nums[low] <= temp) {
+            while (low < high && nums[low] <= temp){
                 low++;
             }
             nums[high] = nums[low];
         }
         nums[low] = temp;
         return low;
-    }
-
-    //递归排序
-    public static void Quick(int[] nums, int low, int high) {
-        if (low < high) {
-            int mid = getMiddle(nums,low,high);
-            Quick(nums,low,mid-1);
-            Quick(nums,mid+1,high);
-        }
-    }
-
-    public static void Quick_Sort(int[] nums) {
-        if (nums.length > 0)
-            Quick(nums,0,nums.length-1);
     }
 
     public static void main(String[] args) {
