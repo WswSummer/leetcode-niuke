@@ -7,7 +7,7 @@ package com.wsw.leetcode.Sort;
  */
 public class ShellSort {
     public static void Shell_Sort(int[] nums) {
-        int number = nums.length / 2;
+        int number = nums.length / 2; //增量
         int temp;
         int j;
         while (number >= 1){
@@ -20,7 +20,7 @@ public class ShellSort {
                 }
                 nums[j + number] = temp;
             }
-            number = number / 2;
+            number = number / 2; //增量变为一半
         }
     }
 
