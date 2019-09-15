@@ -1,5 +1,7 @@
 package com.wsw.leetcode.qiuzhao.CVTE;
 
+import java.util.Arrays;
+
 /**
  * Created by wsw on 2019/9/15 09:52
  * 合并两个有序的数组
@@ -40,8 +42,6 @@ public class MergeArray {
         int[] A = {98, 96, 90, 88};
         int[] B = {97, 95, 94, 82, 80};
         int[] C = mergeArray.merge(A, B);
-        for (int res : C) {
-            System.out.print(res + " ");
-        }
+        System.out.println(Arrays.toString(C));
     }
 }
