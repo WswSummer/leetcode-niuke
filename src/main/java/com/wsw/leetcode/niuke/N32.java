@@ -40,7 +40,6 @@ public class N32 {
         return count;
     }
 
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
