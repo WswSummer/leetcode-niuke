@@ -23,6 +23,7 @@ public class Main1 {
             sum[i] = sum[i-1]+nums[i];
         }
         int ans = 0;
+        //dp[i]存储的是到i为止，前面所有大于等于m的组合的最小
         int[] dp = new int[n+1];
         for (int i = m; i <=n ; i++) {
             dp[i] = Math.min(dp[i-1],sum[i-1]-sum[i-m])+nums[i];
