@@ -8,7 +8,8 @@ import java.lang.reflect.Method;
  */
 public class methodClass {
     public static void main(String[] args) throws Exception {
-        Class<?> mClass = MethodUse.class;
+        //Class<?> mClass = MethodUse.class;
+        Class<?> mClass = Class.forName("com.wsw.leetcode.fanshe.MethodUse");
         //创建methodClass的实例
         Object mObject = mClass.getDeclaredConstructor().newInstance();
         //获取methodClass类的add方法
