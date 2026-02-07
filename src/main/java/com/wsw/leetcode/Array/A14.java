@@ -1,6 +1,6 @@
 package com.wsw.leetcode.Array;
 
-public class T1
+public class A14
 {
     public static void twoSum(int[] nums, int target)
     {

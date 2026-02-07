@@ -6,7 +6,7 @@ package com.wsw.leetcode.Array;
  * 输出删除后数组的元素和数组长度
  *
  */
-public class T2
+public class A15
 {
     //双指针法
     public int removeDuplicates(int[] nums)
@@ -34,7 +34,7 @@ public class T2
 
     public static void main(String[] args)
     {
-        T2 t = new T2();
+        A15 t = new A15();
 
         int[] nums = new int[]{0,0,1,1,2};
 
